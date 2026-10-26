@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HESTIA Data — Egocentric Home-Activity Training Data</title>
+<meta name="description" content="Consented egocentric video of real household tasks, captured across Türkiye. QA-gated, metadata-rich, delivered in RLDS, HDF5, LeRobot or your schema.">
+<style>
+  :root{--bg:#020617;--bg2:#0f172a;--line:#1e293b;--txt:#e2e8f0;--mut:#94a3b8;--am:#f59e0b;}
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--txt);line-height:1.6}
+  .wrap{max-width:72rem;margin:0 auto;padding:0 1.5rem}
+  header{position:sticky;top:0;z-index:50;background:rgba(2,6,23,.85);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;padding:.9rem 0}
+  .brand{display:flex;align-items:center;gap:.6rem;font-weight:700;font-size:1.1rem}
+  .logo{width:2rem;height:2rem;border-radius:.5rem;background:var(--am);color:#020617;display:flex;align-items:center;justify-content:center;font-weight:800}
+  .nav a{color:var(--mut);text-decoration:none;margin-left:1.5rem;font-size:.9rem}
+  .nav a:hover{color:#fff}
+  .btn{display:inline-block;background:var(--am);color:#020617;font-weight:600;padding:.6rem 1.2rem;border-radius:.6rem;text-decoration:none;border:0;cursor:pointer;font-size:.95rem}
+  .btn.ghost{background:transparent;color:var(--txt);border:1px solid var(--line)}
+  .hero{text-align:center;padding:6rem 0 4rem;background:radial-gradient(60% 50% at 50% 0%,rgba(245,158,11,.12),transparent)}
+  .pill{display:inline-block;border:1px solid rgba(245,158,11,.4);color:var(--am);border-radius:999px;padding:.3rem 1rem;font-size:.8rem;letter-spacing:.03em}
+  h1{font-size:clamp(2.2rem,5vw,4rem);line-height:1.15;margin:1.4rem auto .8rem;max-width:50rem}
+  h1 span{color:var(--am)}
+  .lead{max-width:44rem;margin:0 auto;color:var(--mut);font-size:1.15rem}
+  .cta{display:flex;gap:.8rem;justify-content:center;margin-top:2rem;flex-wrap:wrap}
+  .stats{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;max-width:64rem;margin:4rem auto 0}
+  .stat{border:1px solid var(--line);background:rgba(15,23,42,.6);border-radius:.9rem;padding:1.1rem}
+  .stat b{display:block;color:var(--am);font-size:1.15rem}
+  .stat small{color:var(--mut)}
+  section{padding:5rem 0;border-top:1px solid var(--line)}
+  h2{font-size:2rem;margin-bottom:.6rem}
+  .sub{color:var(--mut);max-width:44rem}
+  .grid{display:grid;gap:1.2rem;margin-top:2.5rem}
+  .card{border:1px solid var(--line);background:rgba(15,23,42,.6);border-radius:.9rem;padding:1.5rem}
+  .card h3{font-size:1.1rem;margin:.7rem 0 .4rem}
+  .card p{color:var(--mut);font-size:.92rem}
+  .ico{color:var(--am)}
+  .task{display:flex;gap:.6rem;align-items:center;border:1px solid var(--line);background:var(--bg2);border-radius:.6rem;padding:.8rem 1rem;font-size:.92rem}
+  .task::before{content:"✓";color:var(--am);font-weight:700}
+  .step .n{color:var(--am);font-weight:700;font-size:.85rem}
+  .step h3{font-size:1.25rem;margin:.3rem 0}
+  .step p{color:var(--mut);font-size:.92rem}
+  form{margin-top:2rem;display:grid;gap:.9rem;max-width:40rem}
+  input,textarea{width:100%;background:var(--bg2);border:1px solid var(--line);color:var(--txt);border-radius:.6rem;padding:.75rem 1rem;font-size:.95rem;font-family:inherit}
+  input:focus,textarea:focus{outline:1px solid var(--am)}
+  .row{display:grid;grid-template-columns:1fr 1fr;gap:.9rem}
+  footer{border-top:1px solid var(--line);padding:2rem 0;text-align:center;color:var(--mut);font-size:.85rem}
+  @media(min-width:768px){.stats{grid-template-columns:repeat(4,1fr)}.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:repeat(4,1fr)}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <div class="brand"><div class="logo">H</div>HESTIA Data</div>
+    <nav>
+      <a href="#data">Data</a>
+      <a href="#why">Why us</a>
+      <a href="#process">Process</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="btn" href="#contact">Request pilot</a>
+  </div>
+</header>
+
+<div class="hero wrap">
+  <span class="pill">PHYSICAL AI TRAINING DATA · EGOCENTRIC VIDEO</span>
+  <h1>Real household skill,<br><span>captured first-person.</span></h1>
+  <p class="lead">HESTIA Data operates a consented capture network across Türkiye, recording everyday home chores from the human point of view — QA-gated, metadata-rich, and delivered in the formats your robot foundation model already ingests.</p>
+  <div class="cta">
+    <a class="btn" href="#contact">Start a 10-hour pilot</a>
+    <a class="btn ghost" href="#data">See task catalog</a>
+  </div>
+  <div class="stats">
+    <div class="stat"><b>1080p+</b><small>Capture standard</small></div>
+    <div class="stat"><b>6+</b><small>Task families at launch</small></div>
+    <div class="stat"><b>48h</b><small>Pilot turnaround</small></div>
+    <div class="stat"><b>RLDS / HDF5 / MP4+JSON</b><small>Delivery formats</small></div>
+  </div>
+</div>
+
+<section id="data">
+  <div class="wrap">
+    <h2>Task catalog</h2>
+    <p class="sub">Everyday chores performed naturally in real homes — not staged repetitions. Custom scripts, object sets, and failure/recovery coverage on request.</p>
+    <div class="grid g4">
+      <div class="task">Food prep &amp; cooking</div>
+      <div class="task">Dishwashing &amp; kitchen reset</div>
+      <div class="task">Laundry &amp; garment folding</div>
+      <div class="task">Surface cleaning &amp; mopping</div>
+      <div class="task">Table &amp; shelf organizing</div>
+      <div class="task">Tea / coffee preparation</div>
+      <div class="task">Object placement &amp; retrieval</div>
+      <div class="task">Custom task scripts</div>
+    </div>
+  </div>
+</section>
+
+<section id="why">
+  <div class="wrap">
+    <h2>Why teams buy from HESTIA</h2>
+    <div class="grid g3">
+      <div class="card"><div class="ico">🏠</div><h3>Real homes, not studios</h3><p>Recordings captured in lived-in apartments and houses across Türkiye — the environmental diversity manipulation policies need to generalize.</p></div>
+      <div class="card"><div class="ico">✋</div><h3>Hands-in-frame discipline</h3><p>Every episode passes automated checks (hand coverage, motion naturalness, lighting) plus human review. You pay for accepted hours only.</p></div>
+      <div class="card"><div class="ico">🛡️</div><h3>Compliance-ready provenance</h3><p>Written consent, third-party masking workflow, documented retention &amp; deletion policy. KVKK-aligned today, GDPR roadmap as regulations converge.</p></div>
+      <div class="card"><div class="ico">⚙️</div><h3>Robot-ready delivery</h3><p>Task-level metadata, sub-action segmentation on request, per-joint hand pose via partner pipeline. Ships in RLDS, HDF5, LeRobot or your schema.</p></div>
+      <div class="card"><div class="ico">🌍</div><h3>Bridge geography</h3><p>European-timezone collaboration, EU-adjacent legal framework, and a household culture spanning Anatolian and modern urban contexts.</p></div>
+      <div class="card"><div class="ico">📷</div><h3>Hardware-flexible</h3><p>Head-mounted smartphone capture at scale, or multi-sensor rigs (RGB-D, IMU, wrist cameras) for premium programs.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="process">
+  <div class="wrap">
+    <h2>How engagement works</h2>
+    <div class="grid g3">
+      <div class="card step"><div class="n">01</div><h3>Scope</h3><p>You send task list, quality bar, volume and format. We return a fixed pilot plan within 48 hours.</p></div>
+      <div class="card step"><div class="n">02</div><h3>Pilot</h3><p>10–50 hours with acceptance report: usable-minutes-per-hour, rejection causes, sample clips.</p></div>
+      <div class="card step"><div class="n">03</div><h3>Scale</h3><p>Monthly capacity blocks with weekly QA dashboards. Geographic exclusivity available per region.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <h2>Request a pilot</h2>
+    <p class="sub">Tell us your task list, target volume and format. We reply within 48 hours with a pilot plan and acceptance-criteria sheet.</p>
+    <p class="sub" style="margin-top:1rem;color:#e2e8f0">📧 <a href="mailto:cem@segegroup.com" style="color:var(--am);text-decoration:none">cem@segegroup.com</a> · hello@hestiadata.net</p>
+    <p class="sub" style="margin-top:.4rem;font-size:.85rem">A data venture backed by SEGE Group.</p>
+    <form onsubmit="event.preventDefault();this.innerHTML='<p style=&quot;color:#34d399&quot;>Request received. Our team will reply within 48 hours.</p>';">
+      <div class="row">
+        <input required placeholder="Name">
+        <input required type="email" placeholder="Work email">
+      </div>
+      <input placeholder="Company">
+      <textarea required rows="5" placeholder="Task list, volume, quality bar, delivery format…"></textarea>
+      <button class="btn" style="width:fit-content" type="submit">Send request</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">HESTIA Data · A data venture backed by SEGE Group · cem@segegroup.com · hello@hestiadata.net</div>
+</footer>
+
+</body>
+</html>
